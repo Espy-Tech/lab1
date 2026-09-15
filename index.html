@@ -6,8 +6,101 @@
     <title>Lab1_web_2026</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <a href="https://kubsu.ru">KUBSU</a>
-    
+    <h1>ЗАДАНИЕ 1: HTML 5 страница с маркированным списком гиперссылок и формой </h1>
+    <h2>Списка гиперссылок </h2>
+    <ul>
+        <li><a href="http://kubsu.ru">Гиперссылку на главную страницу сайта kubsu.ru</a></li>
+        <li><a href="https://kubsu.ru">Абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
+        <li><a href="image.jpg"> Изображение</a></li>
+        <li><a href="about/about.html">Окращенную с сылку на внутреннюю страницу</a> </li>
+        <li><a href="/">Сокращенную ссылку на главную страницу;</a></li>
+        <li><a href="index.html#formulaire">Ссылку на фрагмент текущей страницы;</a></li>
+        <li><a href="https://kubsu.ru/?param1=value1&amp;param2=value2&amp;param3=value3">Ссылку с тремя параметрами в URL</a></li>
+        <li><a href="index.html">Относительную на страницу в текущем каталоге;</a></li>
+        <li><a href="about/about.html">Относительную на страницу в каталоге about</a></li>
+        <li><a href="../index.html">Относительную на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../index.html">Относительную на страницу в каталоге двумя уровнями выше</a></li>
+        <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML">Контекстную в тексте абзаца</a></li>
+        <li><a href="https://kubsu.ru/#section">Ссылку на фрагмент страницы стороннего сайта;</a></li>
+        <li>
+            <img src="carte.png" alt="Карта КубГУ со ссылками" usemap="#image-map" width="300">
+            <map name="image-map">
+                <area shape="rect" coords="0,180,640,550" href="https://kubsu.ru" alt="КубГУ">
+                <area shape="circle" coords="1030,700,120" href="https://developer.mozilla.org/fr/docs/Web/HTML" alt="Documentation HTML">
+            </map>
+            Ссылки из прямоугольных и круглых областей картинки (HTML-тег map)
+        </li>
+        <li><a href="">Ссылку с пустым href</a></li>
+        <li><a>Ссылку без href</a></li>
+        <li><a href="https://kubsu.ru" rel="nofollow">Ссылку, по которой запрещен переход поисковикам</a></li>
+        <li><a href="https://kubsu.ru" rel="nofollow">Запрещенную для индексации поисковиками</a></li>
+        <li>Нумерованный список ссылок с подписями title:
+            <ol>
+                <li><a href="https://kubsu.ru" title="Главная страница КубГУ">КубГУ</a></li>
+                <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML" title="Документация HTML">MDN HTML</a></li>
+            </ol>
+        </li>
+        <li><a href="ftp://example.com/file.txt">Ссылку на файл на сервере FTP</a></li>
+    </ul>
+
+
+
+    <h2 id="formulaire">Форма</h2>
+    <form action="/" method="post">
+    <label >
+        ФИO  <input type="text" placeholder="Самаке Ибрахим">
+    </label>
+    <br><br>
+    <label>
+        Телефон : <input type="number" placeholder="+7 925 023 45 33">
+    </label>
+    <br><br>
+    <label >
+        E-mail: <input type="email" placeholder="samake@yendex.ru">
+    </label>
+    <br><br>
+    <label >
+        Дата рождения: <input type="date">
+    </label>
+    <br><br>
+    Пол:
+    <br>
+        <label>
+            <input type="radio" name="sexe" value="homme"> 
+            Мужской
+        </label>
+        <label>
+            <input type="radio" name="sexe" value="femme"> 
+            Женский 
+        </label>
+    <br><br>
+    любимый язык программирования:
+        <br>
+        <label ><input type="checkbox" name="language" value="pascal">Pascal</label>
+        <label ><input type="checkbox" name="language" value="C">C</label>
+        <label ><input type="checkbox" name="language" value="C++">C++</label>
+        <label ><input type="checkbox" name="language" value="JavaScript">JavaScript</label>
+        <label ><input type="checkbox" name="language" value="PHP">PHP</label>
+        <label ><input type="checkbox" name="language" value="Python">Python</label>
+        <label ><input type="checkbox" name="language" value="Java">Java</label>
+        <label ><input type="checkbox" name="language" value="Haskel">Haskel</label>
+        <label ><input type="checkbox" name="language" value="Clojure">Clojure</label>
+        <label ><input type="checkbox" name="language" value="Prolog">Prolog</label>
+        <label ><input type="checkbox" name="language" value="Scala ">Scala </label>
+    <br><br>
+    <label >
+        Биография: 
+        <br>
+        <textarea name="field-name-2" placeholder="Расскажите о себе..."></textarea>
+    </label>
+    <br><br>
+    <label >
+        <input type="checkbox" name="contrat" value="oui" required>
+        С контрактом ознакомлен (а)
+    </label>
+    <p>
+    <input type="submit" value="Сохранить">
+    </p>
+    </form>
+
 </body>
-</html>
