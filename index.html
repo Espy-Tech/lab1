@@ -41,35 +41,36 @@
     <h2 id="formulaire">Форма</h2>
     <form action="/" method="post">
     <label >
-        ФИO  <input type="text" placeholder="Самаке Ибрахим">
+        ФИO  <input type="text" placeholder="Самаке Ибрахим" required>
     </label>
     <br><br>
     <label>
-        Телефон : <input type="number" placeholder="+7 925 023 45 33">
+        Телефон : <input type="number" placeholder="+7 925 023 45 33" required>
     </label>
     <br><br>
     <label >
-        E-mail: <input type="email" placeholder="samake@yendex.ru">
+        E-mail: <input type="email" placeholder="samake@yandex.ru" required>
     </label>
     <br><br>
     <label >
-        Дата рождения: <input type="date">
+        Дата рождения: <input type="date" required>
     </label>
     <br><br>
     Пол:
     <br>
         <label>
-            <input type="radio" name="sexe" value="homme"> 
+            <input type="radio" name="sexe" value="homme" required> 
             Мужской
         </label>
         <label>
-            <input type="radio" name="sexe" value="femme"> 
+            <input type="radio" name="sexe" value="femme" required> 
             Женский 
         </label>
     <br><br>
     Любимый язык программирования:
         <br>
-        <label ><input type="checkbox" name="language" value="pascal">Pascal</label>
+        <section required>
+        <label ><input type="checkbox" name="language" value="pascal" >Pascal</label>
         <label ><input type="checkbox" name="language" value="C">C</label>
         <label ><input type="checkbox" name="language" value="C++">C++</label>
         <label ><input type="checkbox" name="language" value="JavaScript">JavaScript</label>
@@ -80,7 +81,10 @@
         <label ><input type="checkbox" name="language" value="Clojure">Clojure</label>
         <label ><input type="checkbox" name="language" value="Prolog">Prolog</label>
         <label ><input type="checkbox" name="language" value="Scala ">Scala </label>
+    
+    </section>
     <br><br>
+
     <label >
         Биография: 
         <br>
