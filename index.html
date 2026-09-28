@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab1_web_2026</title>
 </head>
+
 <body>
     <h1>ЗАДАНИЕ 1: HTML 5 страница с маркированным списком гиперссылок и формой </h1>
     <h2>Списка гиперссылок </h2>
@@ -15,7 +17,8 @@
         <li><a href="about/about.html">Окращенную с сылку на внутреннюю страницу</a> </li>
         <li><a href="/">Сокращенную ссылку на главную страницу;</a></li>
         <li><a href="index.html#formulaire">Ссылку на фрагмент текущей страницы;</a></li>
-        <li><a href="https://kubsu.ru/?param1=value1&amp;param2=value2&amp;param3=value3">Ссылку с тремя параметрами в URL</a></li>
+        <li><a href="https://kubsu.ru/?param1=value1&amp;param2=value2&amp;param3=value3">Ссылку с тремя параметрами в
+                URL</a></li>
         <li><a href="index.html">Относительную на страницу в текущем каталоге;</a></li>
         <li><a href="about/about.html">Относительную на страницу в каталоге about</a></li>
         <li><a href="../index.html">Относительную на страницу в каталоге уровнем выше текущего</a></li>
@@ -40,64 +43,67 @@
 
     <h2 id="formulaire">Форма</h2>
     <form action="/" method="post">
-    <label >
-        ФИO  <input type="text" placeholder="Самаке Ибрахим" required>
-    </label>
-    <br><br>
-    <label>
-        Телефон : <input type="number" placeholder="+7 925 023 45 33" required>
-    </label>
-    <br><br>
-    <label >
-        E-mail: <input type="email" placeholder="samake@yandex.ru" required>
-    </label>
-    <br><br>
-    <label >
-        Дата рождения: <input type="date" required>
-    </label>
-    <br><br>
-    Пол:
-    <br>
         <label>
-            <input type="radio" name="sexe" value="homme" required> 
+            ФИO <input type="text" name="full-name" placeholder="Самаке Ибрахим" minlength="2" maxlength="100"
+                pattern="\p{L}+(?: \p{L}+|'\p{L}+|-\p{L}+)*"
+                title="Используйте только буквы, пробелы, дефис или апостроф" required>
+        </label>
+        <br><br>
+        <label>
+            Телефон : <input type="tel" name="phone" placeholder="+7 925 023 45 33" inputmode="tel"
+                pattern="\+?(?=.*[0-9])[0-9 ]{7,19}" title="Введите от 7 до 19 цифр, можно со знаком + и пробелами"
+                required>
+        </label>
+        <br><br>
+        <label>
+            E-mail: <input type="email" name="email" placeholder="samake@yandex.ru" maxlength="254" required>
+        </label>
+        <br><br>
+        <label>
+            Дата рождения: <input type="date" name="birth-date" max="2026-09-27" required>
+        </label>
+        <br><br>
+        Пол:
+        <br>
+        <label>
+            <input type="radio" name="sexe" value="homme" required>
             Мужской
         </label>
         <label>
-            <input type="radio" name="sexe" value="femme" required> 
-            Женский 
+            <input type="radio" name="sexe" value="femme" required>
+            Женский
         </label>
-    <br><br>
-    Любимый язык программирования:
+        <br><br>
+        <label for="language">Любимый язык программирования:</label>
         <br>
-        <section>
-        <label ><input type="checkbox" name="language" value="pascal"  required>Pascal</label>
-        <label ><input type="checkbox" name="language" value="C" required>C</label>
-        <label ><input type="checkbox" name="language" value="C++" required>C++</label>
-        <label ><input type="checkbox" name="language" value="JavaScript" required>JavaScript</label>
-        <label ><input type="checkbox" name="language" value="PHP" required>PHP</label>
-        <label ><input type="checkbox" name="language" value="Python" required>Python</label>
-        <label ><input type="checkbox" name="language" value="Java" required>Java</label>
-        <label ><input type="checkbox" name="language" value="Haskel" required>Haskel</label>
-        <label ><input type="checkbox" name="language" value="Clojure" required>Clojure</label>
-        <label ><input type="checkbox" name="language" value="Prolog" required>Prolog</label>
-        <label ><input type="checkbox" name="language" value="Scala " required>Scala </label>
-            required
-    </section>
-    <br><br>
+        <select id="language" name="language" multiple required size="11">
+            <option value="pascal">Pascal</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="Haskel">Haskel</option>
+            <option value="Clojure">Clojure</option>
+            <option value="Prolog">Prolog</option>
+            <option value="Scala">Scala</option>
+        </select>
+        <br><br>
 
-    <label >
-        Биография: 
-        <br>
-        <textarea name="field-name-2" placeholder="Расскажите о себе..." required></textarea>
-    </label>
-    <br><br>
-    <label >
-        <input type="checkbox" name="contrat" value="oui" required>
-        С контрактом ознакомлен (а)
-    </label>
-    <p>
-    <input type="submit" value="Сохранить">
-    </p>
+        <label>
+            Биография:
+            <br>
+            <textarea name="biography" placeholder="Расскажите о себе..." maxlength="2000" required></textarea>
+        </label>
+        <br><br>
+        <label>
+            <input type="checkbox" name="contrat" value="oui" required>
+            С контрактом ознакомлен (а)
+        </label>
+        <p>
+            <input type="submit" value="Сохранить">
+        </p>
     </form>
 
 </body>
